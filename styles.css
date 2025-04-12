@@ -260,18 +260,18 @@ button[type="submit"]:hover {
 .product-card {
   background-color: #111;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: none;
 }
 
 .product-card img {
   max-width: 100%;
-  border-radius: 4px;
-  margin-bottom: 15px;
+  border-radius: none;
+  margin-bottom: none;
 }
 
 .product-card h3 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: none;
 }
 
 .product-card p {
