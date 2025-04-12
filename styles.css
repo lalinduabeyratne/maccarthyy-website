@@ -362,3 +362,24 @@ button[type="submit"]:hover {
   font-size: 16px;
 }
 https://lalinduabeyratne.github.io/maccarthyy-website/index.html
+.snipcart-add-item {
+  background: linear-gradient(135deg, #000000, #444444);
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.snipcart-add-item:hover {
+  background: linear-gradient(135deg, #ff4747, #000000);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 71, 71, 0.4);
+}
+
