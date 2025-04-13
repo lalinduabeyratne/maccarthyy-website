@@ -382,4 +382,13 @@ https://lalinduabeyratne.github.io/maccarthyy-website/index.html
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(255, 71, 71, 0.4);
 }
+.cart-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
