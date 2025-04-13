@@ -1,5 +1,4 @@
-/* This styles the whole page */
-
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +11,7 @@ body {
   color: #fff;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -39,9 +39,10 @@ body {
   text-transform: uppercase;
 }
 
+/* Hero Section */
 .hero {
   height: 100vh;
-  background: url('hero.jpg') center/cover no-repeat; 
+  background: url('hero.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,96 +71,22 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-.products {
+
+/* Products Section */
+.products,
+.product-section,
+.shop {
   padding: 60px 20px;
   text-align: center;
 }
 
-.products h2 {
+.products h2,
+.product-section h2,
+.shop h2 {
   font-size: 36px;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-}
-
-.product-card {
-  background-color: #111;
-  padding: 20px;
-  width: 280px;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.product-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.product-card p {
-  color: #ccc;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-.lookbook {
-  background: url('lookbook.jpg') center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-  position: relative;
-}
-
-.lookbook::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
-}
-
-.lookbook-content {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-}
-
-.lookbook h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-.lookbook p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #ddd;
-}
-.product-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.product-section h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 .product-grid {
@@ -195,7 +122,114 @@ body {
 .product-card p {
   font-size: 16px;
   color: #ccc;
+  font-weight: bold;
 }
+
+/* Lookbook Section */
+.lookbook {
+  background: url('lookbook.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+}
+
+.lookbook::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.lookbook-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.lookbook h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.lookbook p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Team Section */
+.team {
+  padding: 60px 20px;
+  background-color: #222;
+}
+
+.team h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 250px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05) rotateZ(1deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 16px;
+}
+
+/* Contact Section */
 .contact {
   padding: 60px 20px;
   max-width: 600px;
@@ -241,43 +275,41 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #ddd;
 }
-.shop {
-  padding: 60px 20px;
-  text-align: center;
+
+/* Snipcart Button */
+.snipcart-add-item {
+  background: linear-gradient(135deg, #000000, #444444);
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.shop h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
+.snipcart-add-item:hover {
+  background: linear-gradient(135deg, #ff4747, #000000);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 71, 71, 0.4);
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.product-card {
-  background-color: #111;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.product-card img {
-  max-width: 100%;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-
-.product-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.product-card p {
-  font-size: 18px;
+/* Cart Button */
+.cart-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
 }
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -304,103 +336,9 @@ button[type="submit"]:hover {
   .product-grid {
     grid-template-columns: 1fr;
   }
-}
-.about {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #111;
-  color: #fff;
-}
 
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
+  .team-members {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
-
-.about p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.team {
-  padding: 60px 20px;
-  background-color: #222;
-}
-
-.team h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.team-members {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.team-member {
-  text-align: center;
-  max-width: 250px;
-}
-
-.team-member img {
-  max-width: 100%;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.team-member h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.team-member p {
-  font-size: 16px;
-}
-https://lalinduabeyratne.github.io/maccarthyy-website/index.html
-.snipcart-add-item {
-  background: linear-gradient(135deg, #000000, #444444);
-  color: #ffffff;
-  border: none;
-  padding: 0.8rem 1.6rem;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.snipcart-add-item:hover {
-  background: linear-gradient(135deg, #ff4747, #000000);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 71, 71, 0.4);
-}
-.cart-button {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.team-member img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
-
-.team-member img:hover {
-  transform: scale(1.05) rotateZ(1deg);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
