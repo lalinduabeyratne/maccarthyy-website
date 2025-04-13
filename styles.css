@@ -391,4 +391,16 @@ https://lalinduabeyratne.github.io/maccarthyy-website/index.html
   cursor: pointer;
   font-weight: bold;
 }
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05) rotateZ(1deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
 
